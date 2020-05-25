@@ -16,6 +16,7 @@ class StatsServiceTest {
         assertEquals(expected, actual);
 
     }
+
     @org.junit.jupiter.api.Test
     void findAverage() {
         StatsService service = new StatsService();
@@ -27,6 +28,7 @@ class StatsServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
     void findMonthMax() {
         StatsService service = new StatsService();
@@ -38,6 +40,7 @@ class StatsServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
     void findMonthMin() {
         StatsService service = new StatsService();
@@ -49,6 +52,7 @@ class StatsServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
     void findCountOverAverage() {
         StatsService service = new StatsService();
@@ -60,6 +64,7 @@ class StatsServiceTest {
 
         assertEquals(expected, actual);
     }
+
     @org.junit.jupiter.api.Test
     void findCountUnderAverage() {
         StatsService service = new StatsService();
