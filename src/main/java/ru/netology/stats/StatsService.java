@@ -10,18 +10,15 @@ public class StatsService {
     }
 
     public int findAverage(int[] sales){
-//        int sum = 0;
-//        for (int sale : sales) {
-//            sum += sale;
-//        }
         int currentAverage = calculateSum(sales) / sales.length;
         return currentAverage;
     }
 
+
     public int findMonthMax(int[] sales){
         int currentMax = sales[0];
         int month = 0;
-        int monthMax = 1;
+        int monthMax = 0;
         for (int sale : sales) {
             month++;
             if (currentMax <= sale) {
@@ -49,26 +46,22 @@ public class StatsService {
     public int findCountOverAverage(int[] sales) {
         int currentAverage = findAverage(sales);
         int count = 0;
-        int countOverAverage = 0;
-        for (int sale : sales) {
+            for (int sale : sales) {
             if (currentAverage < sale) {
                 count++;
-                countOverAverage = count;
-            }
+                            }
         }
-        return countOverAverage;
+        return count;
     }
 
     public int findCountUnderAverage(int[] sales) {
         int currentAverage = findAverage(sales);
         int count = 0;
-        int countUnderAverage = 0;
         for (int sale : sales) {
             if (currentAverage > sale) {
                 count++;
-                countUnderAverage = count;
             }
         }
-        return countUnderAverage;
+        return count;
     }
 }
